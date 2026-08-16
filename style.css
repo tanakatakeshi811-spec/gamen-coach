@@ -49,6 +49,14 @@ h1, h2, h3 { line-height: 1.4; }
   margin-bottom: 18px;
 }
 
+.hero-icon {
+  width: 128px;
+  height: 128px;
+  border-radius: 28px;
+  margin-bottom: 18px;
+  box-shadow: 0 12px 32px rgba(62, 203, 255, 0.25);
+}
+
 .hero h1 {
   font-size: 3rem;
   margin: 0 0 18px;
