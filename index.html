@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>画面コーチ | 画面を録画・スクショ保存するWindows常駐ツール</title>
+<meta name="description" content="ゲームプレイや勉強の様子を後から振り返れるように、画面を録画したり一定間隔でスクリーンショットを自動保存し続けるWindows常駐ツール。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="badge">Windows常駐ツール・無料</div>
+    <h1>画面<span class="accent">コーチ</span></h1>
+    <p class="lead">
+      ゲームプレイや勉強の様子を、後からじっくり振り返るための記録ツール。<br>
+      ホットキーひとつで画面録画。もうひとつのホットキーで、一定間隔の自動スクショ保存。<br>
+      それだけに専念したシンプルな設計です。
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#download">ダウンロード</a>
+      <a class="btn btn-ghost" href="#how">使い方を見る</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="section" id="about">
+    <div class="wrap">
+      <h2>画面コーチとは</h2>
+      <p>
+        「上達のために、後で自分のプレイや勉強の様子を見返したい。でも録画や記録の準備が面倒で続かない」──
+        画面コーチは、そんな悩みのために作った超シンプルなツールです。
+      </p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">●</div>
+          <h3>画面全体を録画</h3>
+          <p>ホットキー1つで開始/停止。mp4形式で保存されるので、そのまま動画プレーヤーで見返せます。</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">◎</div>
+          <h3>一定間隔で自動スクショ</h3>
+          <p>10秒・30秒・60秒など好きな間隔で、画面を自動でパシャパシャ保存し続けます。動画より軽く、後から要点だけ見返しやすいのが利点です。</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔒</div>
+          <h3>AI連携なし・完全ローカル</h3>
+          <p>録画やスクショを外部のAIやサーバーに送ることは一切ありません。撮ったものはすべて自分のPCの中だけに残ります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="workflow">
+    <div class="wrap">
+      <h2>振り返りの流れ</h2>
+      <p>画面コーチ自体には「AIに相談する」機能はあえて付けていません。かわりに、こういう流れで使うことを想定しています。</p>
+      <ol class="steps">
+        <li><strong>画面コーチを起動</strong>してプレイ・勉強中はそのまま常駐させておく</li>
+        <li>ホットキーで<strong>録画・自動スクショ</strong>を開始。あとは意識せず普段通り作業する</li>
+        <li>作業が終わったら停止。<strong>セッションフォルダ</strong>に動画・スクショがまとまって溜まっている</li>
+        <li>そのフォルダの画像や動画を、自分が相談したい相手(AIアシスタントや先生、友達など)に直接見せて振り返る</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="wrap">
+      <h2>使い方</h2>
+      <div class="hotkey-table">
+        <div class="hotkey-row hotkey-head">
+          <div>ホットキー</div>
+          <div>動作</div>
+        </div>
+        <div class="hotkey-row">
+          <div><kbd>F9</kbd></div>
+          <div>画面録画の開始 / 停止(トグル)</div>
+        </div>
+        <div class="hotkey-row">
+          <div><kbd>F10</kbd></div>
+          <div>自動スクリーンショット保存の開始 / 停止(トグル)</div>
+        </div>
+      </div>
+      <p class="note">※ ホットキーはアプリのウィンドウ上の「変更」ボタンから、好きなキーに変更できます。上記は初期設定です。</p>
+
+      <h3>起動方法</h3>
+      <ol class="steps">
+        <li>下の「ダウンロード」から一式を入手し、好きなフォルダに展開する</li>
+        <li><strong>Pythonがインストールされていない場合</strong>、<a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org</a>から入れておく(インストール時に「Add python.exe to PATH」に必ずチェック)</li>
+        <li><code>起動.bat</code>をダブルクリックする(初回だけ必要なライブラリが自動でインストールされます)</li>
+        <li>ウィンドウが開いたら準備完了。F9・F10で操作を始められます</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section alt" id="download">
+    <div class="wrap">
+      <h2>ダウンロード</h2>
+      <p>
+        現在はexe化(インストーラー)は行っておらず、Pythonで直接実行する形での配布です。
+        <br>下記のリポジトリから一式をダウンロードしてください。
+      </p>
+      <div class="download-box">
+        <a class="btn btn-primary btn-lg" href="https://github.com/tanakatakeshi811-spec/gamen-coach/archive/refs/heads/main.zip" id="download-link">
+          最新版をダウンロード(ZIP)
+        </a>
+        <p class="code-hint">またはGit環境がある方は:</p>
+        <pre><code>git clone https://github.com/tanakatakeshi811-spec/gamen-coach.git</code></pre>
+      </div>
+      <p class="note">必要環境: Windows 10/11、Python 3.10以降</p>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <h2>よくある質問</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <h3>Q. 録画データや設定は外部に送信されますか?</h3>
+          <p>A. いいえ。録画・スクリーンショット・設定は、すべて自分のPC内の指定フォルダに保存されるだけです。外部サーバーやAIへの自動送信は一切ありません。</p>
+        </div>
+        <div class="faq-item">
+          <h3>Q. 録画と自動スクショは同時に使えますか?</h3>
+          <p>A. はい。それぞれ独立したホットキーで別々にON/OFFでき、同時に動かすこともできます。</p>
+        </div>
+        <div class="faq-item">
+          <h3>Q. 保存先フォルダは変更できますか?</h3>
+          <p>A. アプリ画面の「保存先を変更」ボタンから、好きなフォルダに変更できます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>画面コーチ - シンプルな画面記録ツール</p>
+    <!-- 公開後、フィードバック先を掲載する場合はここにmailtoリンク等を追加 -->
+  </div>
+</footer>
+
+</body>
+</html>

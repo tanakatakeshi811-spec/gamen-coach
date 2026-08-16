@@ -1,0 +1,223 @@
+:root {
+  --bg: #0c1114;
+  --panel: #12181c;
+  --panel-alt: #0a0e11;
+  --accent: #3ecbff;
+  --accent-dim: #2b8fb8;
+  --text-main: #dff3fb;
+  --text-dim: #8fa4ad;
+  --border: #223138;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-main);
+  font-family: "Segoe UI", "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
+  line-height: 1.8;
+}
+
+.wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 { line-height: 1.4; }
+
+.accent { color: var(--accent); }
+
+/* ---------- ヒーロー ---------- */
+.hero {
+  padding: 90px 0 70px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(62, 203, 255, 0.12), transparent 45%),
+    var(--panel);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border: 1px solid var(--accent-dim);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0 0 18px;
+  letter-spacing: 0.04em;
+}
+
+.hero .lead {
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  max-width: 620px;
+  margin: 0 auto 32px;
+}
+
+.cta-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: opacity 0.15s ease;
+}
+
+.btn:hover { opacity: 0.85; }
+
+.btn-primary {
+  background: var(--accent);
+  color: #06272f;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border);
+}
+
+.btn-lg { padding: 14px 34px; font-size: 1.05rem; }
+
+/* ---------- セクション共通 ---------- */
+.section { padding: 64px 0; }
+.section.alt { background: var(--panel); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+.section h2 {
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.section h3 {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  margin: 26px 0 10px;
+}
+
+.section p { color: var(--text-dim); }
+
+/* ---------- カード ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.card-icon {
+  color: var(--accent);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.card h3 { margin: 0 0 8px; font-size: 1.02rem; }
+.card p { margin: 0; font-size: 0.92rem; }
+
+/* ---------- 手順リスト ---------- */
+.steps {
+  color: var(--text-dim);
+  padding-left: 1.4em;
+}
+.steps li { margin-bottom: 8px; }
+.steps strong { color: var(--text-main); }
+
+/* ---------- ホットキー表 ---------- */
+.hotkey-table {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.hotkey-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.hotkey-row:last-child { border-bottom: none; }
+
+.hotkey-head {
+  background: var(--panel-alt);
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+kbd {
+  background: var(--panel-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2px 10px;
+  color: var(--accent);
+  font-family: Consolas, monospace;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-top: 10px;
+}
+
+/* ---------- ダウンロード ---------- */
+.download-box {
+  margin-top: 20px;
+}
+
+.code-hint {
+  margin-top: 22px;
+  margin-bottom: 6px;
+  font-size: 0.88rem;
+}
+
+pre {
+  background: var(--panel-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: Consolas, monospace;
+  color: var(--accent);
+}
+
+/* ---------- FAQ ---------- */
+.faq-item {
+  border-top: 1px solid var(--border);
+  padding: 16px 0;
+}
+.faq-item:first-child { border-top: none; }
+.faq-item h3 { margin: 0 0 6px; font-size: 0.98rem; }
+.faq-item p { margin: 0; font-size: 0.92rem; }
+
+/* ---------- フッター ---------- */
+.footer {
+  padding: 28px 0;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}

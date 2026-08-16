@@ -1,0 +1,7 @@
+{
+  "record_hotkey": "f9",
+  "screenshot_hotkey": "f10",
+  "screenshot_interval_sec": 30,
+  "video_fps": 8,
+  "save_root": "セッション"
+}
